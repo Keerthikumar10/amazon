@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test name="Test_firefox">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="scripts.VerifyActitimeVersion"/>
+      <class name="scripts.InvalidLogin"/>
+      <class name="scripts.ValidLoginLogout"/>
+    </classes>
+  </test> <!-- Test_firefox -->
+  <test name="Test_chrome">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="scripts.VerifyActitimeVersion"/>
+      <class name="scripts.InvalidLogin"/>
+      <class name="scripts.ValidLoginLogout"/>
+    </classes>
+  </test> <!-- Test_chrome -->
+  <test name="Test_chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="scripts.InvalidLogin">
+        <methods>
+          <include name="closeAppn"/>
+          <include name="closeAppn"/>
+          <include name="openAppn"/>
+          <include name="openAppn"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- scripts.InvalidLogin -->
+      <class name="scripts.ValidLoginLogout">
+        <methods>
+          <include name="login"/>
+        </methods>
+      </class> <!-- scripts.ValidLoginLogout -->
+      <class name="scripts.VerifyActitimeVersion">
+        <methods>
+          <include name="closeAppn"/>
+          <include name="closeAppn"/>
+          <include name="openAppn"/>
+          <include name="openAppn"/>
+        </methods>
+      </class> <!-- scripts.VerifyActitimeVersion -->
+    </classes>
+  </test> <!-- Test_chrome(failed) -->
+  <test name="Test_firefox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="scripts.InvalidLogin">
+        <methods>
+          <include name="closeAppn"/>
+          <include name="closeAppn"/>
+          <include name="openAppn"/>
+          <include name="openAppn"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- scripts.InvalidLogin -->
+      <class name="scripts.ValidLoginLogout">
+        <methods>
+          <include name="login"/>
+        </methods>
+      </class> <!-- scripts.ValidLoginLogout -->
+      <class name="scripts.VerifyActitimeVersion">
+        <methods>
+          <include name="closeAppn"/>
+          <include name="closeAppn"/>
+          <include name="openAppn"/>
+          <include name="openAppn"/>
+        </methods>
+      </class> <!-- scripts.VerifyActitimeVersion -->
+    </classes>
+  </test> <!-- Test_firefox(failed) -->
+</suite> <!-- Failed suite [Suite] -->
