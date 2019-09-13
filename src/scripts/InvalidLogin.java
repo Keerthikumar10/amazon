@@ -26,8 +26,7 @@ public class InvalidLogin extends Generic_Test {
 		lp.verifyErrmsg();
 		
 		lp.verifyTitle(lp_title);
-		
-		System.out.print("hi");
+	
 		
 	}
 }
