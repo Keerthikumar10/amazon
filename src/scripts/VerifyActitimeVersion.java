@@ -38,5 +38,7 @@ public class VerifyActitimeVersion extends Generic_Test {
 		hp.clickLogout();
 		
 		lp.verifyTitle(lp_title );
+		
+		System.out.println("hi");
 	}
 }
