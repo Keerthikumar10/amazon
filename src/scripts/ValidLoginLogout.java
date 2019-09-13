@@ -24,6 +24,9 @@ public class ValidLoginLogout extends Generic_Test{
 		lp.clickLogin();
 		
 		lp.verifyTitle(hp_title);
+		
+		System.out.println("Keerthi Kumar");
+		
 	}
 
 }
